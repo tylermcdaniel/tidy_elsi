@@ -12,4 +12,9 @@ To download the data in a format that will work with tidy_elsi, you need the fol
 To assign your data to a tidy table in R, you can write `df <- elsi_table("elsi_type.csv", "School Type [Public School]", "school_type")`. You may need to change the first function argument based on the filepath. 
 
 # An Example - Multiple Variables
+The real utility of tidy_elsi comes when you are attempting to download many variables at once from [ELSI](https://nces.ed.gov/ccd/elsi/tableGenerator.aspx). Let's say you want the number of free-lunch-eligible students in each school in addition to the school type. 
+
+In this case, you should download two _separate_ .csv files. Both will contain the following variables: School Name [Public School] Latest available year, State Name [Public School] Latest available year, State Abbr [Public School], School ID - NCES Assigned [Public School], Agency ID - NCES Assigned [Public School]. One will contain the variable School Type [Public School] (we can call this "elsi_type.csv"), and the other will contain the variable Free Lunch Eligible [Public School] (we can call this "elsi_fl.csv"). 
+
+Now, you can assign your data to a tidy table in R by writing `df <- elsi_table(list("elsi_type.csv", "elsi_fl.csv"), list("School Type [Public School]", "Free Lunch Eligible [Public School]"), list("school_type", "free_lunch"))`. You may need to change the first function arguments based on the filepaths. 
 
