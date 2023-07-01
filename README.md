@@ -3,6 +3,7 @@ The Urban Insitute's Education Data package is a terrific resource for loading s
 
 The purpose of this code  is to read data files from ELSI into R. This code should be used once you have downloaded a data file from ELSI. Please pay careful attention to the formatting query requirements - these are a bit tedious, but the package will save you some time if used correctly.
 
+Another note: right now, the package is only designed for gathering public school data. I plan to add private school and district functionalities in the future.
 
 # One Variable
 Let's say you want to gather data on school type. You go to [ELSI](https://nces.ed.gov/ccd/elsi/tableGenerator.aspx), gather data for public schools for years 2000-2001 through 2019-2020. 
